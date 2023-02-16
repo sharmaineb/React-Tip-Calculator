@@ -1,6 +1,7 @@
 form {
 	display: flex;
 	align-items: center;
+    flex-direction: row;
     margin: 0;
     padding: 0.5em;
     font-family: 'Times New Roman', Times, serif;
@@ -10,14 +11,32 @@ form {
 
 h2 {
     padding: 0.5em;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2em;
+    font-size: 1.7em;
+    align-items: center;
 }
 
 h3 {
     padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1.3em;
+    font-size: 1.1em;
+}
+
+.billAmount {
+    padding: 1em;
+}
+
+.tipPercent {
+    padding: 1em;
+}
+
+.numPeople {
+    padding: 1em;
 }
