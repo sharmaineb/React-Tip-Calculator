@@ -4,9 +4,9 @@ import { useState } from 'react';
 
 function Calculator() {
     const [bill, setBill] = useState('')
-    const [people, setPeople] = useState('')
-    const [billTip, setBillTip] = useState('')
-   
+    const [tipPercent, setTipPercent] = useState('')
+    const [split, setSplit] = useState('')
+
      return (
        <form>
          <input 
@@ -17,17 +17,23 @@ function Calculator() {
    
          <input 
            type="number"
-           value={people}
-           onChange={(e) => setPeople(e.target.value )}
+           value={tipPercent}
+           onChange={(e) => setTipPercent(e.target.value )}
          />
 
          <input 
            type="number"
-           value={billTip}
-           onChange={(e) => setBillTip(e.target.value )}
+           value={split}
+           onChange={(e) => setSplit(e.target.value )}
          />
        </form>
      )
    }
 
 export default Calculator
+
+// inputs for:
+// bill, tip %, split
+
+// display:
+// tip amount, the bill total, per person amount
