@@ -3,14 +3,14 @@ import './Calculator.css';
 import { useState } from 'react';
 
 function Calculator() {
-    const [bill, setBill] = useState(0)
-    const [tip, setTip] = useState(0)
-    const [split, setSplit] = useState(0)
+    const [bill, setBill] = useState(0);
+    const [tip, setTip] = useState(0);
+    const [split, setSplit] = useState(0);
 
-    const tip_to_pay = bill * (tip/100)
-    const bill_total = bill + tip_to_pay
-    const person_total = bill_total / split
-    const tip_per_person = (bill * tip_to_pay) / split
+    const tip_to_pay = bill * (tip/100);
+    const bill_total = bill + tip_to_pay;
+    const person_total = bill_total / split;
+    const tip_per_person = tip_to_pay / split
 
 
      return (
@@ -20,7 +20,7 @@ function Calculator() {
                 <input 
                 type="number"
                 value={bill}
-                onChange={(e) => setBill(e.target.value )}
+                onChange={(e) => setBill(parseFloat(e.target.value) )}
                 />
                 </div>
 
@@ -28,7 +28,7 @@ function Calculator() {
                 <input 
                 type="number"
                 value={tip}
-                onChange={(e) => setTip(e.target.value )}
+                onChange={(e) => setTip(parseFloat(e.target.value) )}
                 />
                 </div>
 
@@ -36,7 +36,7 @@ function Calculator() {
                 <input 
                 type="number"
                 value={split}
-                onChange={(e) => setSplit(e.target.value )}
+                onChange={(e) => setSplit(parseFloat(e.target.value) )}
                 />
                 </div>
             </form>
@@ -51,7 +51,7 @@ function Calculator() {
      )
    }
 
-export default Calculator
+export default Calculator;
 
 // inputs for:
 // bill, tip %, split
